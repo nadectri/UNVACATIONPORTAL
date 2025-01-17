@@ -1,0 +1,695 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav{
+  height: 80px;
+  background-color: rgb(14, 13, 13);
+}
+
+nav img{
+  width: 250px;
+  position: absolute;
+  top: 17px;
+  left: 12%;
+}
+
+nav ul{
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+
+}
+
+nav ul li a{
+  position: relative;
+  color: white;
+  font-size: 18px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+nav ul li a:before{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+
+label #btn,
+label #cancel{
+  color: antiquewhite;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  
+  nav {
+    height: 10vh;
+    width: 100%;
+    
+  }
+  nav img{
+    left: 36%;
+    top: 33px;
+    width: 130px;
+    /* display: flex; */
+   
+  }
+  
+  label #btn{
+    display: inline-block;
+  }
+  ul {
+    position: absolute;
+    width: 170%;
+    height: vh;
+    background: #34495e;
+    top: 80px;
+    left: 0;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: inline-block;
+    margin: 5px 0;
+    line-height: 40px;
+    
+  }
+
+  nav ul li a{
+    padding: 5px ;
+    position: relative;
+    left: -15px;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+  #check:checked ~ label #btn{
+    display: inline-block;
+  }
+
+  #check:checked ~ label #cancel{
+    display: inline-block;
+  }
+  navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  .navbar li {
+    width: 100%;
+  }
+  ul {
+    position: absolute;
+    width: 170%;
+    height: vh;
+    background: #34495e;
+    top: 80px;
+    left: 0;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li a{
+    font-size: 8px;
+    padding: 5px ;
+    position: relative;
+    left: -175px;
+  }
+
+nav {
+  height: 10vh;
+  margin-top: 17px;
+}
+
+
+/* body {
+  background-position: 10px 350px;
+  background-size: cover;
+  width: 768px;
+  height: 10px;
+} */
+/* 
+.hero{
+  margin-top: 55px;
+  width: 768px;
+  height: 10px;
+}
+
+
+.hero{
+  .headtext{
+   margin-top: -150px;
+   margin-left: -700px;
+  }
+}
+.hero{
+  button{
+   margin-left: -300px;
+   margin-top: 50px;
+   position: relative;
+   top: -21px;
+  }
+}
+.hero{
+  .small-text{
+    margin-top: 20px;
+    position: relative;
+    left: -360px;
+  }
+}
+.small-text{
+  font-size: 10px;
+} */
+
+/* Hero1 */
+/* .hero1 img {
+  margin-left: -50px;
+  height: 200px;
+}
+.img-headtexts, h1{
+  font-size: x-large;
+  position: relative;
+  left: -3px;
+}
+.img-smalltexts, p {
+  position: relative;
+  font-size: 15px;
+  top: 20px;
+  left: -70px;
+}
+ button {
+  position: relative;
+  top: 80px;
+  left: -200px;
+} */
+/* Hero2 */
+/* .hero2{
+  display: flexbox;
+  justify-content: center;
+  height: 5%;
+}
+.hero2 {
+  .container{
+     margin-top: 390px;
+     margin-left: 50px;
+  }
+}
+.hero2{
+  .container-texts h1{
+    font-size: large;
+  }
+}
+.hero2{
+  .container2{
+    margin-top: 200px;
+    margin-left: -190px;
+    margin-bottom: 100px;
+    width: 250px;
+    height: 50px;
+  }
+}
+.hero2{
+  .container2-texts{
+    font-size: 7px;
+  }
+}
+.hero2{
+  button{
+    margin-left: 250px;
+    position: relative;
+    top: 10px;
+    
+  }
+}
+.hero2{
+  height: 5%;
+} */
+/* button {
+  position: relative;
+  left: 100px;
+  top: -50px;
+} */
+/* .hero3 {
+  .hero3-texts {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+.hero4 {
+  .images {
+    position: relative;
+    left: -230px;
+  }
+  img {
+    height: 100px;
+  }
+}
+.hero5 {
+  #hero5-bigtexts {
+    font-size: x-large;
+  }
+  #hero5-smalltexts {
+    font-size: 11px;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+} */
+
+
+}
+
+  
+/* The section with the background image */
+.hero {
+    background-image: url(../Images/homebackground.png.png); /*Path to your image */
+    background-size: cover;  /* Ensures the image covers the entire section */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    
+    position: relative; /* To position the child elements like opacity overlay and texts */
+    height: 100vh; /* Set the height of the section (adjust as needed) */
+  }
+/* The opacity overlay */
+.opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Darken the background to make text more readable */
+    z-index: 1; /* Places the overlay above the background but below the text */
+  }
+  /* The text container */
+  .texts {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Full height of the section */
+  }
+  
+  /* Headline text styling */
+  .headtext h1 {
+    font-size: 3rem; /* Adjust the size as needed */
+    margin: 0;
+    color: dimgrey;
+  }
+  
+  .headtext span {
+    color: #31199c;
+    font-size: 5rem; /* Optional: You can color the <span> differently */
+  }
+  
+  /* Small text styling */
+  .small-text h1 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    line-height: 1.5;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #FFD700; /* Button background color */
+    color: black; /* Button text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #FF8C00; /* Darken button color on hover */
+  }
+
+
+/* Section2 */
+
+.hero1 {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#img1 {
+  margin-right: -50%;
+  width: 100%;
+  margin-left: 5%;
+}
+
+.img-smalltexts p {
+  margin-top: 40px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.hero1 button {
+  background: rgb(0, 119, 255);
+  color: white;
+  transition: 0.4s ease-in-out;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  width: 190px;
+  height: 40px;
+  margin-top: 60px;
+}
+.hero1 button:hover {
+  background: rgb(58, 57, 46);
+  color: rgb(12, 32, 99);
+  transition: 0.4s ease-in-out;
+}
+
+
+/*.....Section Hero2....*/
+.hero2 {
+  background-image: url(../Images/unsection2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 82vh;
+  width: 100%;
+  background-size: cover;
+  justify-items: center;
+  margin-top: 90px;
+}
+.opacity1 {
+  opacity: 0.4;
+  background-color: rgb(23, 88, 23);
+  z-index: 5;
+  width: 100%;
+  height: 82vh;
+}
+
+.container {
+  background-color: white;
+  width: 500px;
+  height: 150px;
+  display: flex;
+  position: absolute;
+  top: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.container-texts {
+  margin-left: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-texts h1 {
+  color: rgb(199, 98, 98);
+  font-size: 55px;
+  font-family: 'Lucida Sans', sans-serif;
+}
+.container-texts span {
+  color: cadetblue;
+}
+
+.container2 {
+  background-color: rgb(238, 229, 229);
+  width: 600px;
+  height: 150px;
+  position: absolute;
+  top: 1570px;
+  left: 30%;
+  padding: 10px;
+  background-color: transparent;
+  border-style: ridge;
+  border-radius: 10px;
+}
+.container2-texts {
+  font-size: 17px;
+  color: white;
+  font-weight: 800;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hero2 button {
+  background: rgb(236, 207, 43);
+  color: white;
+  transition: 0.4s ease-in-out;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  width: 190px;
+  height: 40px;
+  margin-top: 100px;
+}
+
+.hero2 button:hover {
+  background: rgb(58, 57, 46);
+  color: rgb(12, 32, 99);
+  transition: 0.4s ease-in-out;
+}
+/*...SECTION HERO3 .....*/
+.hero3 {
+  margin-top: 7%;
+}
+
+.hero3-texts {
+  margin-bottom: 100px;
+  margin-left: 90px;
+  font-weight: 800;
+  color: dimgray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*....SECTION HERO4.....*/
+
+.hero4 {
+    margin-top: 80px;
+    margin-left: 300px;
+    margin-bottom: 80px;
+}
+
+/*....SECTION HERO5...*/
+
+#hero5-bigtexts {
+    margin-top: 50px;
+    margin-left: 170px;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(8, 24, 59);
+    margin-bottom: 30px;
+}
+
+#hero5-smalltexts {
+    margin-bottom: 20px;
+    margin-left: 170px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    margin-top: 50px;
+  }
+
+  .texts {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+  }
+  .headtext h1 {
+    font-size: 2rem;
+  }
+
+  .headtext span {
+    font-size: 3rem;
+  }
+
+  .small-text h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+  .hero1 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero1 button {
+    width: 80%;
+    padding: 12px;
+  }
+
+  .hero1 img {
+    margin-left: -50px;
+    height: 200px;
+  }
+
+   /* Hero2 Section */
+   .hero2 {
+    height: auto;
+    padding: 10px;
+  }
+
+  .container {
+    width: 90%;
+    left: 38%;
+    transform: translateX(-50%);
+  }
+
+  .container-texts h1 {
+    font-size: 2rem;
+  }
+
+  .container2 {
+    width: 50%;
+    left: 70%;
+    top: 220%;
+    transform: translateX(-50%);
+  }
+
+  .hero2{
+    .container2-texts{
+      font-size: 10px;
+    }
+
+      /* Hero3 Section */
+  .hero3-texts {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+   /* Hero4 Section */
+   .hero4 {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  #hero5-bigtexts {
+    font-size: 28px;
+    margin-left: 10px;
+  }
+
+  #hero5-smalltexts {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}
+
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .headtext h1 {
+    font-size: 1.5rem;
+  }
+
+  .headtext span {
+    font-size: 2.5rem;
+  }
+
+  .small-text h1 {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .hero1 button {
+    width: 80%;
+    padding: 12px;
+  }
+
+  .container {
+    width: 90%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .container-texts h1 {
+    font-size: 1.5rem;
+  }
+
+  .container2 {
+    width: 90%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero3-texts {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .hero4 {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #hero5-bigtexts {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  #hero5-smalltexts {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    height: 80px;
+    background-color: rgb(14, 13, 13);
+  }
+  
+  nav img{
+    width: 250px;
+    position: absolute;
+    top: 17px;
+    left: 12%;
+  }
+  
+  nav ul{
+    float: right;
+    margin-right: 25px;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+  
+  }
+  
+  nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+  }
+  
+  nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  
+  label #btn,
+  label #cancel{
+    color: antiquewhite;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  
+/*Section hero*/
+
+.hero {
+    color: blue;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    
+
+}
+.all-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.headtexts {
+    font-family: cursive;
+    font-size: 35px;
+}
+
+.smalltexts {
+    font-family: cursive;
+    font-size: 15px;
+    color: darkslategrey;
+    margin-top: 5px;
+}
+
+.smalltexts, #underlist {
+    margin-top: 10px;
+}
+.smalltexts, p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.smalltexts1 {
+    font-family: cursive;
+    font-size: 15px;
+    color: darkslategrey;
+    margin-top: 5px;
+}
+
+#bottomtexts {
+    color: rgb(54, 53, 53);
+    margin-top: 65px;
+    font-size: 10px;
+}
+
+.footertexts {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 150px;
+    color: dimgray;
+}
+
+.footerimage {
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    height: 10vh;
+    width: 100%;
+    
+  }
+  nav img{
+    left: 36%;
+    top: 33px;
+    width: 130px;
+    /* display: flex; */
+   
+  }
+  
+  label #btn{
+    display: inline-block;
+  }
+  ul {
+    position: absolute;
+    width: 170%;
+    height: 10vh;
+    background: #34495e;
+    top: 80px;
+    left: 0;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: inline-block;
+    margin: 5px 0;
+    line-height: 40px;
+    
+  }
+
+  nav ul li a{
+    padding: 5px ;
+    position: relative;
+    left: -15px;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+  #check:checked ~ label #btn{
+    display: inline-block;
+  }
+
+  #check:checked ~ label #cancel{
+    display: inline-block;
+  }
+  navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  .navbar li {
+    width: 100%;
+  }
+  ul {
+    position: absolute;
+    width: 170%;
+    height: 8vh;
+    background: #34495e;
+    top: 80px;
+    left: 0;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li a{
+    font-size: 8px;
+    padding: 5px ;
+    position: relative;
+    left: -175px;
+  }
+
+nav {
+  height: 10vh;
+  margin-top: 17px;
+}
+
+/* Section hero */
+
+.hero {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.headtexts {
+  font-size: 15px;
+}
+.smalltexts, .smalltexts1 {
+  font-size: 12px;
+}
+.smalltexts, #underlist {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#bottomtexts {
+  font-size: 12px;
+}
+
+.footertexts {
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.footerimage {
+  margin-top: 10px;
+  text-align: center;
+}
+
+}
+
+

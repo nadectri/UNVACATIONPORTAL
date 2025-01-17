@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    height: 80px;
+    background-color: rgb(14, 13, 13);
+  }
+  
+  nav img{
+    width: 250px;
+    position: absolute;
+    top: 17px;
+    left: 12%;
+  }
+  
+  nav ul{
+    float: right;
+    margin-right: 25px;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+  
+  }
+  
+  nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+  }
+  
+  nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  
+  
+  label #btn,
+  label #cancel{
+    color: antiquewhite;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      height: 10vh;
+      width: 100%;
+      
+    }
+    nav img{
+      left: 36%;
+      top: 33px;
+      width: 130px;
+      /* display: flex; */
+     
+    }
+    
+    label #btn{
+      display: inline-block;
+    }
+    ul {
+      position: absolute;
+      width: 170%;
+      height: 10vh;
+      background: #34495e;
+      top: 80px;
+      left: 0;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: inline-block;
+      margin: 5px 0;
+      line-height: 40px;
+      
+    }
+  
+    nav ul li a{
+      padding: 5px ;
+      position: relative;
+      left: -15px;
+    }
+  
+    #check:checked ~ ul{
+      left: 0;
+    }
+  
+    #check:checked ~ label #btn{
+      display: inline-block;
+    }
+  
+    #check:checked ~ label #cancel{
+      display: inline-block;
+    }
+    navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  
+    }
+    .navbar li {
+      width: 100%;
+    }
+    ul {
+      position: absolute;
+      width: 170%;
+      height: 8vh;
+      background: #34495e;
+      top: 80px;
+      left: 0;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li a{
+      font-size: 8px;
+      padding: 5px ;
+      position: relative;
+      left: -175px;
+    }
+  
+  nav {
+    height: 10vh;
+    margin-top: 17px;
+  }
+  
+  }
+
+/*...SECTION HERO....*/
+
+.hero {
+    color: rgb(101, 105, 105);
+}
+
+.image {
+    position: absolute;
+    top: 140px;
+    left: 220px;
+}
+
+.texts {
+    margin-top: 110px;
+    margin-left: 760px;
+    display: flex;
+    justify-content: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 200
+    
+}
+
+.texts1 {
+    margin-top: 129px;
+    margin-left: 760px;
+    display: flex;
+    justify-content: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 200
+    
+}
+
+.texts2 {
+    margin-top: 150px;
+    margin-left: 160px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 200;
+    position: absolute;
+    top: 440px;
+    display: flex;
+
+
+}
+
+.footer-image {
+    margin-top: 50px;
+    margin-left: 100px
+}
+
+@media screen and (max-width: 768px) {
+    /* Hero Section Adjustments */
+    .hero {
+      padding: 20px;
+  }
+
+  .image {
+    position: relative;
+    top: auto; /* Remove absolute positioning */
+    left: 30%;
+    transform: translateX(-50%);
+    width: 50%; /* Reduce the image size */
+    max-width: 200px; /* Ensure the image doesn't get too large */
+}
+.texts, .texts1, .texts2 {
+  margin-left: 0;
+  font-size: 12px; /* Reduce font size */
+  flex-direction: column; /* Stack text vertically */
+  text-align: center; /* Ensure text is centered */
+}
+.texts {
+  margin-top: 350px;
+}
+.texts1 {
+  margin-top: 100px;
+}
+
+.texts2 {
+  font-size: 12px; /* Reduce font size further */
+  margin-top: 90px;
+}
+
+.footer-image {
+       img{
+        margin-top: 20px;
+        max-width: 100%; /* Make the footer image take full width */
+       }
+    }
+}
+
